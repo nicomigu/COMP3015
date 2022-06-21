@@ -34,13 +34,15 @@
       </li>
     </div>
     <div>
-      <li class="list-group-item">
-        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-        COMP2052
+      <form>
+        <li class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+          COMP2052
 
-        <button class="btn btn-outline-secondary" type="button">Edit</button>
-        <button class="btn btn-danger" type="button">Delete</button>
-      </li>
+          <button class="btn btn-outline-secondary" type="button">Edit</button>
+          <button class="btn btn-danger" type="button">Delete</button>
+        </li>
+      </form>
     </div>
   </ul>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
