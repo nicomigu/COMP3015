@@ -1,33 +1,43 @@
 <?php
-include("../models/classes/Course.php");
-include("../models/interfaces/IReadWritable.php");
-include("../models/IO/LocalReadWriter.php");
-include("../models/IO/RemoteReadWriter.php");
 
 class CourseController
 {
   private IReadWritable $io;
-  private string $fileName = "Course.json";
 
-  public function __construct(string $username, IReadWritable $io)
+
+  public function __construct(IReadWritable $io)
   {
     $this->io = $io;
   }
 
-  public function showCourses($jsonFile)
+  public function showCourses()
   {
-    return $this->$io->getCourses();
+    $courses = $this->io->getCourses();
+    //var_dump($courses);
+
+    return $courses;
   }
 
-  public function addCourse()
+  public function addCourse($course)
   {
+    //createCourseId 
+    $this->io->addCourse($course);
   }
 
-  public function finishCourse()
+  public function editCourse($id, string $newCoursename)
   {
+    $this->io->editCourse($id, $newCoursename);
   }
 
-  public function deleteCourse()
+  public function toggleCourse($id)
   {
+    $this->io->toggleCourse($id);
+    //print webpage
+  }
+
+  public function deleteCourse($id)
+  {
+    $this->io->deleteCourse($id);
+    //print webpage
   }
 }
